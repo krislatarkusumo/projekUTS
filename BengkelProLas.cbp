@@ -1,41 +1,152 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<CodeBlocks_project_file>
-	<FileVersion major="1" minor="6" />
-	<Project>
-		<Option title="BengkelProLas" />
-		<Option pch_mode="2" />
-		<Option compiler="gcc" />
-		<Build>
-			<Target title="Debug">
-				<Option output="bin/Debug/BengkelProLas" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Debug/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-g" />
-				</Compiler>
-			</Target>
-			<Target title="Release">
-				<Option output="bin/Release/BengkelProLas" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Release/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-O2" />
-				</Compiler>
-				<Linker>
-					<Add option="-s" />
-				</Linker>
-			</Target>
-		</Build>
-		<Compiler>
-			<Add option="-Wall" />
-		</Compiler>
-		<Unit filename="main.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Extensions>
-			<lib_finder disable_auto="1" />
-		</Extensions>
-	</Project>
-</CodeBlocks_project_file>
+#include <stdio.h>
+#include <stdlib.h>
+
+ void main(){
+ float total_harga, kembali, pembayaran, kurang;
+ int kode_pilihan,pilih, harga_kesepakatan;
+ char m;
+
+
+ menu:
+ printf("                                  \n");
+ printf("\t\tBengkel Pro Las\n");
+ printf("\tSpesialis Cat & Body Repairs\n");
+ printf("\tJalan Dukuh Kupang Barat 22/29 Surabaya\n");
+ printf("=====================================================\n");
+ printf("\n Harga Kaki Lima Kualitas Bintang Lima \n");
+ printf("-----------------------------------------------------\n");
+ printf("Melayani\n");
+ printf("1. Body Repairs\n");
+ printf("2. Custom Body\n");
+ printf("3. Cat satu body\n");
+ printf("4. Salon Mobil\n");
+ printf("5. Ondersteel\n");
+
+ printf("\n Masukan Kode Pelayanan [1/2/3/4/5] = ");scanf("%d", &pilih);
+ switch(pilih){
+   case 1 :
+   printf("\nBody Repairs\n");
+   printf("\nMekanik                  = Pak farikhin & Pak Win");
+   printf("\nNo WhastApp              = 081332310959 ");
+   printf("\nEstimasi                 = 3 hari sampai 30 hari");
+   printf("\nPerkiraan Biaya          = Rp 1500000 sampai Rp 10000000");
+   printf("\nHarga yang Di sepakati   = Rp ") ;scanf ("%d", &harga_kesepakatan);
+   total_harga=("Rp. %. 0f" , harga_kesepakatan);
+   printf("Total Yang Harus dibayar   = Rp. %.0f", total_harga);
+   printf("\ndibayar    = Rp. ");scanf("%f", &pembayaran);
+   if (total_harga<=pembayaran){
+    kembali=pembayaran-total_harga;
+    printf("Kembali    = Rp. %.0f", kembali);
+   }
+   else if(total_harga>=pembayaran){
+    kurang=total_harga-pembayaran;
+    printf("uang Anda Kurang   = Rp. %.0f", kurang);
+    }getch();
+     printf("\n\nTerima Kasih Telah Berkunjung");
+     printf("\nKarena Mobil Yang Kinclong Sebagian dari Iman\n");
+   break;
+
+
+
+       case 2 :
+   printf("\nCustom Body\n");
+   printf("\nMekanik                  = Pak farikhin & Pak Win");
+   printf("\nNo WhastApp              = 081332310959 ");
+   printf("\nEstimasi                 = 3 hari sampai 10 hari");
+   printf("\nPerkiraan Biaya          = Rp 500000 sampai Rp 3000000");
+   printf("\nHarga yang Di sepakati   = Rp ") ;scanf ("%d", &harga_kesepakatan);
+   total_harga=("Rp. %. 0f" , harga_kesepakatan);
+   printf("Total Yang Harus dibayar   = Rp. %.0f", total_harga);
+   printf("\ndibayar    = Rp. ");scanf("%f", &pembayaran);
+   if (total_harga<=pembayaran){
+    kembali=pembayaran-total_harga;
+    printf("Kembali    = Rp. %.0f", kembali);
+   }
+   else if(total_harga>=pembayaran){
+    kurang=total_harga-pembayaran;
+    printf("uang Anda Kurang   = Rp. %.0f", kurang);
+    }getch();
+     printf("\n\nTerima Kasih Telah Berkunjung");
+     printf("\nKarena Mobil Yang Kinclong Sebagian dari Iman\n");
+   break;
+
+    case 3 :
+   printf("\nCat satu Body\n");
+   printf("\nMekanik                  = Pak farikhin & Pak Win");
+   printf("\nNo WhastApp              = 081332310959 ");
+   printf("\nEstimasi                 = 3 hari sampai 7 hari");
+   printf("\nPerkiraan Biaya          = Rp 3000000 sampai Rp 5000000");
+   printf("\nHarga yang Di sepakati   = Rp ") ;scanf ("%d", &harga_kesepakatan);
+   total_harga=("Rp. %. 0f" , harga_kesepakatan);
+   printf("Total Yang Harus dibayar   = Rp. %.0f", total_harga);
+   printf("\ndibayar    = Rp. ");scanf("%f", &pembayaran);
+   if (total_harga<=pembayaran){
+    kembali=pembayaran-total_harga;
+    printf("Kembali    = Rp. %.0f", kembali);
+   }
+   else if(total_harga>=pembayaran){
+    kurang=total_harga-pembayaran;
+    printf("uang Anda Kurang   = Rp. %.0f", kurang);
+    getch();}
+     printf("\n\nTerima Kasih Telah Berkunjung");
+     printf("\nKarena Mobil Yang Kinclong Sebagian dari Iman\n");
+   break;
+
+
+     case 4 :
+   printf("\nSalon Mobil\n");
+   printf("\nMekanik                  = Pak farikhin & Pak Win");
+   printf("\nNo WhastApp              = 081332310959 ");
+   printf("\nEstimasi                 = 1 hari ");
+   printf("\nPerkiraan Biaya          = Rp 0 - Rp 500000");
+   printf("\nHarga yang Di sepakati   = Rp ") ;scanf ("%d", &harga_kesepakatan);
+   total_harga=("Rp. %. 0f" , harga_kesepakatan);
+   printf("Total Yang Harus dibayar   = Rp. %.0f", total_harga);
+   printf("\ndibayar    = Rp. ");scanf("%f", &pembayaran);
+   if (total_harga<=pembayaran){
+    kembali=pembayaran-total_harga;
+    printf("Kembali    = Rp. %.0f", kembali);
+   }
+   else if(total_harga>=pembayaran){
+    kurang=total_harga-pembayaran;
+    printf("uang Anda Kurang   = Rp. %.0f", kurang);
+    }getch();
+     printf("\n\nTerima Kasih Telah Berkunjung");
+     printf("\nKarena Mobil Yang Kinclong Sebagian dari Iman\n");
+   break;
+
+    case 5 :
+   printf("\nOndersteel\n");
+   printf("\nMekanik                  = Pak Ian & Pak Imik");
+   printf("\nNo WhastApp              = 085655974459 ");
+   printf("\nEstimasi                 = 3 hari sampai 10 hari");
+   printf("\nPerkiraan Biaya          = Rp 500000 sampai Rp 3000000");
+   printf("\nHarga yang Di sepakati   = Rp ") ;scanf ("%d", &harga_kesepakatan);
+   total_harga=("Rp. %. 0f" , harga_kesepakatan);
+   printf("Total Yang Harus dibayar   = Rp. %.0f", total_harga);
+   printf("\ndibayar    = Rp. ");scanf("%f", &pembayaran);
+   if (total_harga<=pembayaran){
+    kembali=pembayaran-total_harga;
+    printf("Kembali    = Rp. %.0f", kembali);
+   }
+   else if(total_harga>=pembayaran){
+    kurang=total_harga-pembayaran;
+    printf("uang Anda Kurang   = Rp. %.0f", kurang);
+    }getch();
+     printf("\n\nTerima Kasih Telah Berkunjung");
+     printf("\nKarena Mobil Yang Kinclong Sebagian dari Iman\n");break;
+     default:
+   printf("\nKode yang anda Masukan Salah\n");
+   printf("Apakah Anda Ingin Kemabali Ke Menu? (Y/T)");m=getche();
+   if(m=='Y'||m=='y'){
+    goto menu;
+   }
+   else if (m=='T'||m=='t'){
+    goto exit;
+   }
+   exit:
+   printf("\n\nTerima Kasih telah Berbelanja");
+   break;
+}
+ }
+
